@@ -6,7 +6,6 @@ import AddTodo from './components/addtodo';
 import Footer from './components/footer';
 
 var noteId = 0;
-
 const getVisibleTodos = (todos,filter) => {
     switch(filter){
         case 'SHOW_ALL' : 
