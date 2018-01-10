@@ -30,10 +30,12 @@ class TodoApp extends React.Component{
                     store.dispatch({type:'TOGGLE_TODO',id})
                     }/>
                 </ul>
+                
               <Footer visibilityFilter={visibilityFilter} 
                         onFilterClick={filter => {
                 store.dispatch({type :'SET_VISIBILITY_FILTER',filter});
               }} />
+
               <button onClick = {() => console.log(store.getState())}> Arbitrary Button </button>
             </div>
     }
