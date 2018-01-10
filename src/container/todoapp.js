@@ -25,11 +25,7 @@ class TodoApp extends React.Component{
     render() {
         const {todos,visibilityFilter} = this.props;
         const visibileTodos = getVisibleTodos(todos,visibilityFilter);
-        return(
             <div>
-                <AddTodo onAddClick={text => {
-                    store.dispatch({type:'ADD_TODO',id : noteId++,text})
-                }} />
                 <ul>
                     <Todolist todos={visibileTodos} onTodoClick ={id => 
                     store.dispatch({type:'TOGGLE_TODO',id})
@@ -41,7 +37,6 @@ class TodoApp extends React.Component{
               }} />
               <button onClick = {() => console.log(store.getState())}> Arbitrary Button </button>
             </div>
-        );
     }
 }
 
